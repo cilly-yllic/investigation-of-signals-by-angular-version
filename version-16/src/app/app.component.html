@@ -1,0 +1,13 @@
+{{ count() }}
+<br>
+<button (click)="onCountUp()">count up</button>
+
+<dl *ngFor="let data of list">
+  <dt><b>{{ data.method }}</b></dt>
+  <dd *ngFor="let value of data.values">
+    <dl>
+      <dt>{{ value.type }}</dt>
+      <dd>{{ value.value() }}</dd>
+    </dl>
+  </dd>
+</dl>
