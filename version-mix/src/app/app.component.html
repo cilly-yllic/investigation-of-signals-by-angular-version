@@ -1,0 +1,17 @@
+{{ count() }}
+<br>
+<button (click)="onCountUp()">count up</button>
+
+@for (data of list; track $index) {
+  <dl>
+    <dt><b>{{ data.method }}</b></dt>
+    @for (value of data.values; track $index) {
+      <dd>
+        <dl>
+          <dt>{{ value.type }}</dt>
+          <dd>{{ value.value() }}</dd>
+        </dl>
+      </dd>
+    }
+  </dl>
+}
